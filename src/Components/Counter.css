@@ -1,10 +1,13 @@
 * {
     padding: 0;
     margin: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border: 2px solid #a54946;
     border-radius: 8px;
