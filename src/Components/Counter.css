@@ -60,3 +60,7 @@ input[type="number"] {
     margin-top: 10px;
     font-size: 14px;
 }
+.saved_text {
+    display: flex;
+    width: 175px;
+}

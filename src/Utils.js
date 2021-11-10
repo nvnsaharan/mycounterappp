@@ -1,5 +1,5 @@
 export const utils = {
-    putData: (value) => {
+    putData: (value, setSaving) => {
         fetch(
             "https://interview-8e4c5-default-rtdb.firebaseio.com/front-end.json",
             {
@@ -12,9 +12,11 @@ export const utils = {
             .then((response) => response.json())
             .then((result) => {
                 console.log("Success:", result);
+                setSaving(false);
             })
             .catch((error) => {
                 console.error("Error:", error);
+                setSaving(false);
             });
     },
     getData: (setCount) => {

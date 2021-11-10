@@ -7,6 +7,7 @@ import { utils } from "./Utils";
 
 function App() {
     const [count, setCount] = useState(1);
+    const [saving, setSaving] = useState(false);
 
     useEffect(() => {
         utils.getData(setCount);
@@ -14,7 +15,8 @@ function App() {
     }, []);
 
     useEffect(() => {
-        utils.putData(count);
+        setSaving(true);
+        utils.putData(count, setSaving);
         return () => {};
     }, [count]);
 
@@ -37,6 +39,7 @@ function App() {
                 handleIncrease={handleIncrease}
                 handleDecrease={handleDecrease}
                 handleChange={handleChange}
+                saving={saving}
             />
             <CounterValue value={count} />
         </div>
