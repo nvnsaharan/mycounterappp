@@ -9,7 +9,6 @@
     border: 2px solid #a54946;
     border-radius: 8px;
 }
-
 .counter_Item {
     width: 60px;
     height: 50px;
@@ -17,7 +16,9 @@
     color: #a54946;
     font-size: 26px;
     cursor: pointer;
-    border-radius: 8px;
+    background-color: white;
+    font-weight: bold;
+    text-align: center;
 }
 .decrease {
     border-radius: 8px 0px 0px 8px;
@@ -37,7 +38,22 @@
     color: #a54946;
     font-weight: bold;
     padding: 0 5px;
-    font-size: 16px;
+    font-size: 18px;
     background-color: #f8e9e9;
     outline: none;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.counter_value_div {
+    margin-top: 10px;
+    font-size: 14px;
 }
