@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import Counter from "./Components/Counter";
+import CounterValue from "./Components/CounterValue";
+import "./App.css";
+
+import { utils } from "./Utils";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [count, setCount] = useState(1);
+
+    useEffect(() => {
+        utils.getData(setCount);
+        return () => {};
+    }, []);
+
+    const handleIncrease = () => {
+        setCount(count + 1);
+        utils.putData(count);
+    };
+
+    const handleDecrease = () => {
+        setCount(count - 1);
+        utils.putData(count);
+    };
+
+    const handleChange = (e) => {
+        setCount(Number(e.target.value));
+        utils.putData(count);
+    };
+
+    return (
+        <div className="App">
+            <Counter
+                value={count}
+                handleIncrease={handleIncrease}
+                handleDecrease={handleDecrease}
+                handleChange={handleChange}
+            />
+            <CounterValue value={count} />
+        </div>
+    );
 }
 
 export default App;
