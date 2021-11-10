@@ -1,4 +1,4 @@
-# [My Counter App](https://musicproject-naveen.web.app/)
+# [My Counter App](https://mycounterappp.web.app/)
 
 ## Made with :heart:
 
@@ -15,4 +15,4 @@
 
 ## Live link
 
-[![ForTheBadge built-by-developers](https://img.shields.io/badge/-Live%20Demo-white?style=for-the-badge)](https://musicproject-naveen.web.app/)
+[![ForTheBadge built-by-developers](https://img.shields.io/badge/-Live%20Demo-white?style=for-the-badge)](https://mycounterappp.web.app/)
