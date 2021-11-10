@@ -13,19 +13,21 @@ function App() {
         return () => {};
     }, []);
 
+    useEffect(() => {
+        utils.putData(count);
+        return () => {};
+    }, [count]);
+
     const handleIncrease = () => {
         setCount(count + 1);
-        utils.putData(count);
     };
 
     const handleDecrease = () => {
         setCount(count - 1);
-        utils.putData(count);
     };
 
     const handleChange = (e) => {
         setCount(Number(e.target.value));
-        utils.putData(count);
     };
 
     return (
